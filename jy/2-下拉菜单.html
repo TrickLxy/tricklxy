@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>下拉菜单</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 150px;
+            margin: 50px auto 0;
+            border: 1px solid #000;
+        }
+        button{
+            width: 150px;
+        }
+        ul{
+            width: 150px;
+            list-style: none;
+            border: 1px solid #000;
+            display: none;
+        }
+        li{
+            border-bottom: 1px solid #000;
+            height: 30px;
+            background-color: #fff;
+            line-height: 30px;
+        }
+        #btn{
+            height: 30px;
+            background-color: #fff;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <button id="btn">微博</button>
+    <ul id="ul">
+        <li>用户</li>
+        <li>评论</li>
+        <li>@我</li>
+    </ul>
+</div>
+
+<script>
+    /*鼠标悬停显示菜单，移出隐藏菜单*/
+    // 获取元素
+    var oBtn = document.getElementById('btn')
+    var oUl = document.getElementById('ul')
+    // 鼠标经过button时 button背景变色 ul的dispalay变block
+    // 新知识点：鼠标事件=》onmouseover 鼠标移入事件
+    oBtn.onmouseover = fn1
+    function fn1(){
+        oBtn.style.backgroundColor = 'orangered'
+        oUl.style.display = 'block'
+    }
+    // 鼠标经过button时 button背景变灰 ul的dispalay变none
+    // 新知识点：鼠标事件=》onmouseout 鼠标移出事件
+    oBtn.onmouseout = fn2
+    function fn2(){
+        oBtn.style.backgroundColor = '#ccc'
+        oUl.style.display = 'none'
+    }
+</script>
+</body>
+</html>

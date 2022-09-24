@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 500px;
+            height: 500px;
+            position: relative;
+        }
+
+        img {
+            position: absolute;
+        }
+
+        #guan{
+            position: absolute;
+            left: 0;
+            top: 200px;
+        }
+
+        #kai{
+            position: absolute;
+            left: 50px;
+            top: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="./5-830灯泡/guan.gif" alt="" id="t1">
+        <button id="guan">off</button>
+        <img src="./5-830灯泡/kai.gif" alt="" id="t2">
+        <button id="kai">NO</button>
+     </div>
+    <script>
+        document.getElementById('guan').onclick = function () {
+            document.getElementById('t1').style.zIndex = '0'
+            document.getElementById('t2').style.zIndex = '2'
+        }
+        document.getElementById('kai').onclick = function () {
+            document.getElementById('t1').style.zIndex = '3'
+            document.getElementById('t2').style.zIndex = '0'
+        }
+    </script>
+</body>
+
+</html>
