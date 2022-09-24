@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>显示隐藏</title>
+    <style>
+        #box{
+            background-color: aqua;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn1">隐藏</button>
+    <div id="box"></div>
+    <script>
+        var btn1 = document.getElementById('btn1')
+        var box = document.getElementById('box')
+        // 通过变量记住上一次点击
+        var on = true
+        // 1.单击btn1隐藏box 2.吧btn的内容改成显示 第二次点击显示
+        btn1.onclick = function(){
+        if(on){
+            box.style.display = 'none'
+            btn1.innerHTML = '显示'
+            on = false
+        }else{
+            box.style.display = 'block'
+            btn1.innerHTML = '隐藏'
+            on = true
+        }
+    }
+    </script>
+</body>
+</html>

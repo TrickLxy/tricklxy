@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轮播图</title>
+    <style>
+        #box{
+            border: 5px solid #000;
+            width: 640px;
+            height: 340px;
+            margin: 50px auto 0;
+            position: relative;
+        }
+        #right{
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            margin-top: -13.5;
+            background-color: rgba(23, 23, 23, .8);
+        }
+        #left{
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            margin-top: -13.5;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <img id="left" src="./images/prev.png" alt="">
+        
+        <img id="img" src="./images/aaa.jpg" alt="">
+        <img id="right" src="./images/next.png" alt="">
+    </div>
+    <script>
+        // 获取元素
+        // =等于赋值
+        var img1 = document.getElementById('left')
+        var img2 = document.getElementById('img')
+        var img3 = document.getElementById('right')
+        var num = 0
+        var arr = ['./images/aaa.jpg',
+                './images/bbb.jpg',
+                './images/ccc.jpg',
+                './images/ddd.jpg',
+                './images/eee.jpg']
+        var title = ['[中超联赛]大连人5-1深圳队',
+                '[中超联赛]沧州雄狮0-0上海海港',
+                '[中超联赛]大连人5-1深圳队',
+                '[美网女单]袁悦2-0晋级',
+                '图集-2022F1荷兰大奖赛周四扫描']
+        // 点击img3,切换图片
+        img3.onclick = function(){
+            num = num + 1
+            if(num == 4){
+                num = 0
+            }
+            img2.src = arr[num]
+        }
+        img1.onclick = function(){
+            num = num + 1
+            if(num == 4){
+                num = 0
+            }
+            img2.src = arr[num]
+        }
+    </script>
+</body>
+</html>
+<!-- 
+一、数组是什么
+数组是存储数据的一种特殊形式
+数组
+
+ -->

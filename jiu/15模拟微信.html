@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模拟微信</title>
+    <style>
+        /* 黑外框 */
+        #k1 {
+            width: 350px;
+            height: 650px;
+            background-color: #000;
+            border-radius: 30px;
+            margin: 0 auto;
+            position: relative;
+            box-shadow: 0px 0px 10px 5px #666;
+
+        }
+        /* 白外框 */
+        #k2 {
+            width: 330px;
+            height: 630px;
+            background-color: #fff;
+            border-radius: 30px;
+            margin: 0 auto;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-image: url(./15模拟微信/img/bj.jpg);
+            background-size: 330px 630px;
+        }
+        /* 上白框 */
+        #k3 {
+            width: 330px;
+            height: 70px;
+            background-color: #fff;
+            border-radius: 30px 30px 0 0;
+            margin: 0 auto;
+            position: relative;
+        }
+        /* 时间和电量 */
+        .l1{
+            width: 260px;
+            position: absolute;
+            top: 20px;
+            left: 45px;
+        }
+        .p{
+            width: 18px;
+            height: 18px;
+            position: absolute;
+            left: 190px;
+        }
+        .p1{
+            width: 18px;
+            height: 18px;
+            position: absolute;
+            left: 205px;
+        }
+        .s1{
+            text-align: right;
+            height: 12px;
+            font-size: 12px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            padding: 0 5px;
+            position: absolute;
+            top: 0px;
+            right: 10px;
+        }
+        .l2{
+            width: 300px;
+            position: absolute;
+            top: 45px;
+            left: 15px;
+        }
+        .l3{
+            width: 300px;
+            position: absolute;
+            top: 45px;
+            left: 150px;
+        }.l4{
+            width: 300px;
+            position: absolute;
+            top: 45px;
+            left: 300px;
+        }
+        /* 下白框 */
+        #k4 {
+            width: 330px;
+            height: 50px;
+            background-color: #fff;
+            border-radius: 0 0 30px 30px;
+            margin: 0 auto;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+        }
+        /* 头像 */
+        #k4 #tu{
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+        }
+        /* 镜头 */
+        #y1 {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background-color: #000;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+        }
+        #y2 {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #999;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+        }#y3 {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: #fff;
+            position: absolute;
+            top: 3px;
+            left: 3px;
+        }
+        /* 发送按钮和输入框 */
+        input{
+            border: none;
+        }
+        #msg{
+            width: 200px;
+            height: 30px;
+            position: absolute;
+            bottom: 8px;
+            left: 50px;
+            border-bottom: 1px solid #65c10e;
+            outline:none;
+        }
+        #btn{
+            width: 50px;
+            height: 35px;
+            position: absolute;
+            bottom: 8px;
+            left: 260px;
+            background-color: #65c10e;
+            color: #fff;
+            border: none;
+        }
+        /* 聊天框 */
+        #p{
+            width: 330px;
+            position: relative;
+            left: 10px;
+            top: 10px;
+            float: left;
+            position: relative;
+        }
+        #p img{
+            width: 45px;
+            height: 45px;
+        }
+        #p span{
+            background-color: #fff;
+            padding: 5px;
+            border-radius: 3px;
+            margin-left: 10px;
+            position: absolute;
+            top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="k1"><!-- 黑外框 -->
+        <div id="k2"><!-- 白外框 -->
+            <div id="k3"><!-- 上白框 -->
+                <!-- 时间和电量 -->
+                <div class="l1">
+                    13:14
+                    <img class="p" src="./15模拟微信/img/wl.svg" alt="">
+                    <img class="p1" src="./15模拟微信/img/xh.svg" alt="">
+                    <span class="s1">66</span>
+                </div>
+                <div class="l2">＜</div>
+                <div class="l3">Yy</div>
+                <div class="l4">...</div>
+            </div>
+            <!-- 聊天框 -->
+            <div id="p">
+                <img src="./15模拟微信/img/tu1.jpg" alt="">
+                <span>你好</span>
+            </div>
+            <!-- 下白框 -->
+            <div id="k4">
+                <img id="tu" src="./15模拟微信/img/tu2.jpg" alt="">
+                <input type="text" id="msg">
+                <button id="btn">发送</button>
+            </div>
+            <!-- 镜头 -->
+            <div id="y1">
+                <div id="y2">
+                    <div id="y3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 定义变量 
+        var oImg = document.getElementById('tu')
+        var oInput = document.getElementById('input')
+        var oBtn = document.getElementById('btn')
+        var on = true
+        // 点击图片，切换角色 
+        oImg.onclick = function(){
+            if(on){
+                oImg.src = './15模拟微信/img/tu1.jpg'
+                on = false
+            }else{
+                oImg.src = './15模拟微信/img/tu2.jpg'
+                on = true
+            }
+            
+        }
+        //点击按钮，发送文字
+    </script>
+</body>
+
+</html>

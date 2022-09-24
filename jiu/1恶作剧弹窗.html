@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>恶作剧弹窗</title>
+    <style>
+        #h{
+            margin: 300px 50%;
+            border: none;
+            width: 100px;
+            height: 50px;
+            background-size: 200%;
+            transition: .5s;
+		    border-radius: 50px;
+            background-image: linear-gradient(to right, #12c2e9,#c471ed,#f64f59 );
+        }
+        #h:hover{
+            background-position: right;
+        }
+    </style>
+</head>
+
+<body>
+    <input id="h" type="button" value="点我">
+    <script>
+        var h = document.getElementById('h')
+        var n = 1000
+        h.onclick = function () {
+            for(var i=1;i<n;i=i+1){
+            window.alert('你试试关得掉吗 哈哈哈')
+
+            }
+        }
+    </script>
+</body>
+
+</html>
