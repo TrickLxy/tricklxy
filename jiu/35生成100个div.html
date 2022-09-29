@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            list-style: none;
+        }
+        li{
+            width: 30px;
+            height: 30px;
+            background-color: aquamarine;
+            margin: 10px;
+            text-align: center;
+            line-height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <ul id="box"></ul>
+    <script>
+        var ul = document.getElementById('box')
+        var i
+        // iterate：重复做
+        // for:关键词 用来声明for循环语句
+        // （定义变量；比较表达式；赋值表达式）循环参数
+        // 第一步：解析器解析到16行遇到for =>for循环
+        // 第二步：查看小括号里的第一个参数，查看i的初始值
+        // 第三步：
+        // for (var i = 0;i < 3;i = i + 1){
+        //     // console.log('hello')
+        //     window.alert('hello')
+        // }
+        for(var i=0;i<100;i= i + 1){
+            ul.innerHTML = ul.innerHTML + '<li>' +i+'</li>'
+        }
+    </script>
+</body>
+</html>

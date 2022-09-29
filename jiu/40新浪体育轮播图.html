@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轮播图</title>
+    <style>
+        .box {
+            width: 640px;
+            height: 340px;
+            margin: 50px auto 0;
+            position: relative;
+        }
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .h2{
+            position: absolute;
+            left: 20px;
+            bottom: 0;
+            height: 40px;
+            line-height: 40px;
+            color: #fff;
+            font-size: 20px;
+        }
+        .k{
+            width: 200px;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .k span{
+            display: block;
+            width: 30px;
+            height: 6px;
+            background-color:#ccc;
+            transform: skew(-30deg);
+        }
+        .btn1{
+            width: 80px;
+            height: 150px;
+            position: absolute;
+            left: 0;
+            top: 25%;
+            border: none;
+            background-color: rgba(0,0, 0, .5);
+            color: #fff;
+        }
+        .btn2{
+            width: 80px;
+            height: 150px;
+            position: absolute;
+            right: 0;
+            top: 25%;
+            border: none;
+            background-color: rgba(0,0, 0, .5);
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="z"></div>
+        <img class="img" src="./images3/slider1.jpg" alt="">
+        <h2 class="h2">[NBA]勇士104-89骑士库里9三分砍40分</h2>
+        <button class="btn1">1/5</button>
+        <button class="btn2">1/5</button>
+        <div class="k">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+
+    <script>
+        // 点击按钮让图片、文字、动起来
+        // 数据
+        var arrUrl = [
+                './images3/slider1.jpg',
+                './images3/slider2.jpg',
+                './images3/slider3.jpg',
+                './images3/slider4.jpg',
+                './images3/slider5.jpg']
+        var arrH2 = [
+                '[NBA]勇士104-89骑士库里9三分砍40分',
+                '[NBA]勇士104-89骑士库里9三分',
+                '[NBA]勇士104-89骑士库里9',
+                '[NBA]勇士104-89骑士',
+                '[NBA]勇士104-89']
+        // 获取元素
+        var oImg = document.querySelector('img')
+        var oBtn = document.querySelectorAll('button')
+        var oH2 = document.querySelector('h2')
+        var oDiv = document.querySelector('span')
+        var num = 0
+        oBtn[1].onclick = function(){
+            num = num + 1
+            if(num == 5){
+                num = 0
+            }
+            oImg.src = arrUrl[num]
+            oH2.innerHTML = arrH2[num]
+            oBtn[0].innerHTML = (num+1) +'/' + arrUrl.length
+            oBtn[1].innerHTML = (num+1) +'/ '+ arrUrl.length
+            oBtn[1].style.backgroundColor = 'red'
+        }
+        oBtn[0].onclick = function(){
+            num = num + 1
+            if(num == 5){
+                num = 0
+            }
+            oImg.src = arrUrl[num]
+            oH2.innerHTML = arrH2[num]
+            oBtn[0].innerHTML = (num+1) +'/' + arrUrl.length
+            oBtn[1].innerHTML = (num+1) +'/ '+ arrUrl.length
+            oBtn[0].style.backgroundColor = 'red'
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>什么</title>
+</head>
+<p></p>
+<body>
+    <script>
+        // var str = 'I love you more than I can say'
+        // var s = str.match('lov')//返回值组成null对象
+        var str = navigator.userAgent
+        var oP = document.querySelector('p')
+        if(str.match('Firefox')){
+            console.log('您使用的是火狐浏览器')
+            oP.innerHTML = '您使用的是火狐浏览器'
+        }else if(str.match('Edg')){
+            console.log('您使用的是Edg浏览器')
+            oP.innerHTML = '您使用的是Edg浏览器'
+        }else if(str.match('Chrome')){
+            console.log('您使用的是谷歌浏览器')
+            oP.innerHTML = '您使用的是谷歌浏览器'
+        }else{
+            console.log('您使用的是其他浏览器')
+        }
+        // null:类似于undefined，也是一种特殊的数据类型。表示'空'对象
+        // console.log(s)//小括号内必须转换成布尔型数据：true/false
+        // if(){
+        //     console.log('找到了')
+        // }else{
+        //     console.log('没找到')
+        // }
+    </script>
+</body>
+</html>

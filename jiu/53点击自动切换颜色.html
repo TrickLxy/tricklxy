@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>点击自动切换颜色</title>
+</head>
+<body>
+    <button>kaishi</button>
+    <button>stop</button>
+    <!-- 点击自动随机切换背景色 -->
+    <script>
+        const hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'a', 'b', 'c', 'd', 'e', 'f']
+        let color = '#'
+
+        //从hex数组中随机抽取6个元素
+        function changeColor() {
+            color = '#'
+            for (let i = 0; i < 6; i++) {
+                color += hex[getNum()]  //i是有问题：不随机
+            }
+            console.log(color)
+            document.body.style.background = color
+            color='#'
+        }
+
+        function getNum() {
+            // Math.random()  //0-1
+            return Math.floor(Math.random() * hex.length)
+        }
+        var oBtn = document.querySelectorAll('button')
+        var timer = null
+        // 点击开始
+        oBtn[0].onclick = function () {
+            changeColor()
+            window.clearInterval(timer)
+            // 开启定时器
+            timer = window.setInterval(changeColor,1000)            
+        }
+        console.log(oBtn[0])
+        // 点击停止
+        oBtn[1].onclick = function(){
+            window.clearInterval(timer)
+        }
+    </script>
+</body>
+</html>

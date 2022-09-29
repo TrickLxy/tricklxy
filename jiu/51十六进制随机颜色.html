@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>随机颜色</title>
+</head>
+<body>
+    <button>切换</button>
+
+    <!-- 如何随机生成一个十六进制的颜色 -->
+    <script>
+        //思路：
+        //1.16
+        //2. 16进制
+        //3.Math.random() 随机数 0 - 16
+
+        const hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'a', 'b', 'c', 'd', 'e', 'f']
+        let color = '#'
+
+        //从hex数组中随机抽取6个元素
+        function changeColor() {
+            color = '#'
+            for (let i = 0; i < 6; i++) {
+                color += hex[getNum()]  //i是有问题：不随机
+            }
+            console.log(color)
+            document.body.style.background = color
+        }
+
+        function getNum() {
+            // Math.random()  //0-1
+            return Math.floor(Math.random() * hex.length)
+        }
+        changeColor()
+        //document.body.style
+        const btn = document.querySelector('button')
+        btn.onclick = function () {
+            changeColor()
+
+        }
+
+    </script>
+</body>
+</html>

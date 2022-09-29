@@ -6,74 +6,207 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="wih2h=device-wih2h, initial-scale=1.0">
     <title>Document</title>
-     <style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #7A3EB4;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: slategray;
+        }
+
+        ol,
+        li,
+        h2,
+        h4 {
+            color: #7A3EB4;
+        }
+
         body {
             background-color: #fff;
         }
 
         header {
             height: 100px;
-            background-color: #D6CFE2;
+            background-color: #d0bfee;
+        }
+
+        .header {
+            width: 1100px;
+            margin: 0 auto;
+        }
+
+        .header span {
+            width: 1000px;
+            font-size: 60px;
+            line-height: 100px;
+            font-family: '汉仪秀英体简';
+            color: #7A3EB4;
+            padding: 400px;
         }
 
         .container {
-            margin: 0 auto;
-            wih2h: 1200px;
-            background-color: #fff;
+            margin: 20px auto;
+            width: 1000px;
+            background-color: #ebe3fa;
             line-height: 50px;
+            padding: 50px;
+            position: relative;
+        }
+        .container .z{
+            width: 200px;
+            position: absolute;
+            right: 0;
+            top: 40px;
+        }
+        .container p,h5 {
+            color: #b43e3e;
+            font-size: 12px;
+        }
+        .container #tutu{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 5px;
+        }
+        .container #jiayou{
+            position: absolute;
+            bottom: 5px;
         }
     </style>
 </head>
-<!--  <ol>
-        <h2>对象</h2>
-            <li>1.思维和行为的目标事物。</li>
-            <li>2.恋爱中的对方</li>
-      </ol> -->
+<!-- 
+HTML中有三种列表
+- 无序列表<ul> <li>
+- 有序列表<ol> <li>
+- 定义列表<dl> <dt> <dd>
+举例：
+<dl>
+    <dt>对象</dt>
+    <dd>1.思维和行为的目标事物。</dd>
+    <dd>2.恋爱中的对方</dd>
+</dl>
+<dl>  定义列表
+    <dt>对象</dt>定义列表的标题、术语
+    <dd>1.思维和行为的目标事物。</dd> 定义列表项目
+    <dd>2.恋爱中的对方</dd>
+</dl>
+ -->
 
 <body>
-    <header> </header>
+    <div class="header">
+        <span>我的作业库</span>
+    </div>
+</header>
+<div class="container">
+    <div class="z">
+        <h5>给自己的话<img id="tutu" src="./jiu/img/tuyu.gif" alt=""></h5>
+        <p>迄今所有人生都大写着失败,</p>
+        <p>但不妨碍我继续向前,</p>
+        <p>放弃,就等同失败。<img id="jiayou" src="./jiu/img/jiayou.gif" alt=""></p>
+    </div>
     <div class="container">
         <h2>8月</h2>
         <ol>
-            <li>小米商城</li>
-            <li>太极图</li>
-            <li>钢琴</li>
+            <li><a href="./jiu/小米/XiaoMi.html">小米商城</a></li>
+            <li><a href="./jiu/2taiji.html">太极图</a></li>
+            <li><a href="./jiu/3钢琴键盘.html">钢琴</a></li>
         </ol>
         <h2>9月</h2>
         <h4>9.1 操作属性</h4>
         <ol>
-            <li><a href=''>弹窗恶作剧(window.alert())</a></li>
-            <li><a href='./jy/2-下拉菜单.html'>下拉菜单(切换class属性值)</a></li>
-            <li><a href='./jy/3-831控制字号.html'>文章字号切换(切换class属性值)</a></li>
-            <li><a href='./jy/4-831我与地坛.html'>文章样式切换(切换class属性值)</a></li>
-            <li><a href='./jy/5.dengpao.html'>开关灯(切换src属性值)</a></li>
-            <li><a href='./jy/6-开关灯.html'>开关按钮(切换class属性值)</a></li>
-            <li><a href='./jy/7-831张三在哪里.html'>张三在北京 (读取value属性值)</a></li>
-            <li><a href='./jy/9-当前菜单.html'>当前菜单(切换class属性值)</a></li>
-            <li><a href='./jy/10-选项卡.html'>选项卡(切换class属性值)</a></li>
+            <li><a href="./jiu/1恶作剧弹窗.html" target="_blank">弹窗恶作剧(window.alert())</a></li>
+            <li><a href="./jiu/2-下拉菜单.html" target="_blank">下拉菜单(切换class属性值)</a></li>
+            <li><a href="./jiu/3-831控制字号.html" target="_blank">文章字号切换(切换class属性值)</a></li>
+            <li><a href="./jiu/4-831我与地坛.html" target="_blank">文章样式切换(切换class属性值)</a></li>
+            <li><a href="./jiu/5.dengpao.html" target="_blank">开关灯(切换src属性值)</a></li>
+            <li><a href="./jiu/6-开关灯.html" target="_blank">开关按钮(切换class属性值)</a></li>
+            <li><a href="./jiu/7-831张三在哪里.html" target="_blank">张三在北京 (读取value属性值)</a></li>
+            <li><a href="./jiu/9-当前菜单.html" target="_blank">当前菜单(切换class属性值)</a></li>
+            <li><a href="./jiu/10-选项卡.html" target="_blank">选项卡(切换class属性值)</a></li>
         </ol>
         <h4>9.2 操作样式</h4>
         <ol>
-            <li><a href="./jiu/11div控制面板.html">百变盒子</a></li>
-            <li><a href="./jiu/12five.html">文字字号控制</a></li>
+            <li><a href="./jiu/11div控制面板.html" target="_blank">百变盒子</a></li>
+            <li><a href="./jiu/12文字字号控制.html" target="_blank">文字字号控制</a></li>
         </ol>
         <h4>9.3 操作内容</h4>
         <ol>
-            <li><a href="./jiu/13聊天窗口.html">聊天室</a></li>
-            <li><a href="./jiu/14新浪微博.html">微博</a></li>
-            <li><a href="./jiu/13聊天窗口.html">坚果微信聊天</a></li>
-            <li><a href="./jiu/15模拟微信.html">oppo微信聊天</a></li>
+            <li><a href="./jiu/13聊天窗口.html" target="_blank">聊天室</a></li>
+            <li><a href="./jiu/14新浪微博.html" target="_blank">微博</a></li>
+            <li><a href="./jiu/13聊天窗口.html" target="_blank">坚果微信聊天</a></li>
+            <li><a href="./jiu/15模拟微信.html" target="_blank">oppo微信聊天</a></li>
         </ol>
         <h4>9.4 if条件语句</h4>
         <ol>
-            <li><a href="./jiu/16显示隐藏.html">显示隐藏圆</a></li>
-            <li><a href="./jiu/17头像转换.html">头像切换</a></li>
-            <li><a href="./jiu/18kaoshitanchuan.html">分数评语</a></li>
-            <li><a href="./jiu/19判断边界-.html">边界值</a></li>
-            <li><a href="./jiu/20数组轮播图.html">单模轮播图</a></li>
-            <li><a href="./jiu/21双模轮播图.html">双模轮播图</a></li>
-            <li><a href="./jiu/22字号控制边界.html">字号边界控制</a></li>
-            <li><a href="./jiu/23one.html">计数器</a></li>
+            <li><a href="./jiu/16显示隐藏.html" target="_blank">显示隐藏圆</a></li>
+            <li><a href="./jiu/17头像转换.html" target="_blank">头像切换</a></li>
+            <li><a href="./jiu/18kaoshitanchuan.html" target="_blank">分数评语</a></li>
+            <li><a href="./jiu/19判断边界-.html" target="_blank">边界值</a></li>
+            <li><a href="./jiu/20数组轮播图.html" target="_blank">单模轮播图</a></li>
+            <li><a href="./jiu/21双模轮播图.html" target="_blank">双模轮播图</a></li>
+            <li><a href="./jiu/22字号控制边界.html" target="_blank">字号边界控制</a></li>
+            <li><a href="./jiu/23one.html" target="_blank">计数器</a></li>
+            <li><a href="" target="_blank">珠峰</a></li>
+        </ol>
+        <h4>9.5 for循环</h4>
+        <ol>
+            <li><a href="./jiu/25生成2000个button.html" target="_blank">输出2000个button到页面</a></li>
+            <li><a href="./jiu/26判断大小.html" target="_blank">判断大小</a></li>
+            <li><a href="./jiu/27用法5事件.html" target="_blank">用法5事件</a></li>
+            <li><a href="./jiu/28九九乘法表.html" target="_blank">九九乘法表</a></li>
+            <li><a href="./jiu/29生成10个div.html" target="_blank">生成10个div</a></li>
+            <li><a href="./jiu/30多彩色块.html" target="_blank">多色div</a></li>
+            <li><a href="./jiu/31批量事件.html" target="_blank">批量事件</a></li>
+            <li><a href="./jiu/32旋转v.html" target="_blank">旋转的div</a></li>
+            <li><a href="./jiu/33生成5条新闻.html" target="_blank">生成5条新闻</a></li>
+            <li><a href="./jiu/34生成10个div.html" target="_blank">生成10个div</a></li>
+            <li><a href="./jiu/35生成100个div.html" target="_blank">生成100个div</a></li>
+            <li><a href="./jiu/36图片蒙版.html" target="_blank">照片蒙版</a></li>
+            <li><a href="./jiu/37珠峰.html" target="_blank">fold-times</a></li>
+        </ol>
+        <h4>9.6 函数</h4>
+        <ol>
+            <li><a href="./jiu/38购物.html" target="_blank">购物车Plus</a></li>
+            <li><a href="./jiu/39修改标题.html" target="_blank">修改标题</a></li>
+            <li><a href="./jiu/40新浪体育轮播图.html" target="_blank">sina-slider</a></li>
+            <li><a href="./jiu/41五星评价.html" target="_blank">五星评价</a></li>
+
+        </ol>
+        <h4>9.7 自定义属性</h4>
+        <ol>
+            <li><a href="./jiu/42按钮.html" target="_blank">切换按钮背景色</a></li>
+            <li><a href="./jiu/43自定义属性分配数组.html" target="_blank">控制数字增长</a></li>
+            <li><a href="./jiu/44ABCD.html" target="_blank">切换ABCD</a></li>
+            <li><a href="./jiu/45性别选择.html" target="_blank">选择性别</a></li>
+            <li><a href="./jiu/46.模拟桌面图标.html" target="_blank">桌面图标</a></li>
+            <li><a href="./jiu/47.qq.html" target="_blank">qq</a></li>
+
+        </ol>
+        <h4>9.8 数据类型转换</h4>
+        <ol>
+            <li><a href="./jiu/48判断小数.html" target="_blank">判断小数</a></li>
+            <li><a href="./jiu/49找数字.html" target="_blank">找数字</a></li>
+            <li><a href="./jiu/50qq号.html" target="_blank">QQ号</a></li>
+
+        </ol>
+        <h4>9.9 Math对象</h4>
+        <ol>
+            <li><a href="./jiu/51十六进制随机颜色.html" target="_blank">生成一个16进制的随机颜色</a></li>
+            <li><a href="./jiu/52图片自动切换.html" target="_blank">点击按钮自动切换⻚面背景图片</a></li>
+            <li><a href="./jiu/53点击自动切换颜色.html" target="_blank">点击按钮自动切换⻚面背景色</a></li>
+        </ol>
+        <h4>9.10 Navigator对象</h4>
+        <ol>
+            <li><a href="./jiu/54检查浏览器.html" target="_blank">生成一个20个0-100之间的随机数输出到⻚面上</a></li>
+
         </ol>
     </div>
 </body>
