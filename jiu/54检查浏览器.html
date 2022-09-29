@@ -1,37 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>什么</title>
+  <meta charset="utf-8">
+  <title>Detect User Browser in JavaScript | CodingNepal</title>
+  <style>
+    /* Import Google font - Poppins */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    ::selection {
+      color: #fff;
+      background: #675AFE;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      background: #fff;
+      padding: 30px 40px;
+      align-items: center;
+      border-radius: 10px;
+      justify-content: center;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    .wrapper h2 {
+      color: #675AFE;
+      font-size: 46px;
+    }
+
+    .wrapper .logos {
+      margin-left: 15px;
+    }
+
+    .logos img {
+      opacity: 0.3;
+      margin: 0 7px;
+      transition: opacity 0.4s ease;
+    }
+
+    .logos img:last-child {
+      margin-right: 0px;
+    }
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<p></p>
+
 <body>
-    <script>
-        // var str = 'I love you more than I can say'
-        // var s = str.match('lov')//返回值组成null对象
-        var str = navigator.userAgent
-        var oP = document.querySelector('p')
-        if(str.match('Firefox')){
-            console.log('您使用的是火狐浏览器')
-            oP.innerHTML = '您使用的是火狐浏览器'
-        }else if(str.match('Edg')){
-            console.log('您使用的是Edg浏览器')
-            oP.innerHTML = '您使用的是Edg浏览器'
-        }else if(str.match('Chrome')){
-            console.log('您使用的是谷歌浏览器')
-            oP.innerHTML = '您使用的是谷歌浏览器'
-        }else{
-            console.log('您使用的是其他浏览器')
-        }
-        // null:类似于undefined，也是一种特殊的数据类型。表示'空'对象
-        // console.log(s)//小括号内必须转换成布尔型数据：true/false
-        // if(){
-        //     console.log('找到了')
-        // }else{
-        //     console.log('没找到')
-        // }
-    </script>
+  <div class="wrapper">
+    <h2>Browser:</h2>
+    <div class="logos">
+      <img class="chrome" src="./images6/chrome.png" alt="chrome" title="Google Chrome">
+      <img class="firefox" src="./images6/firefox.png" alt="firefox" title="Mozilla Firefox">
+      <img class="edge" src="./images6/edge.png" alt="edge" title="Microsoft Edge">
+      <img class="opera" src="./images6/opera.png" alt="opera" title="Opera">
+      <img class="safari" src="./images6/safari.png" alt="safari" title="Apple Safari">
+    </div>
+  </div>
+
+  <script>
+    let userAgent = navigator.userAgent;
+    let browser;
+    if (userAgent.match(/edg/i)) {
+      browser = "edge";
+    } else if (userAgent.match(/firefox|fxios/i)) {
+      browser = "firefox";
+    } else if (userAgent.match(/opr\//i)) {
+      browser = "opera";
+    } else if (userAgent.match(/chrome|chromium|crios/i)) {
+      browser = "chrome";
+    } else if (userAgent.match(/safari/i)) {
+      browser = "safari";
+    } else {
+      alert("Other browser");
+    }
+    const logo = document.querySelector(`.logos .${browser}`);
+    if (logo) {
+      logo.style.opacity = "1";
+    }
+  </script>
+
 </body>
+
 </html>
