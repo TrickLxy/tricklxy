@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景尺寸</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            padding: 20px;
+            border: 20px dotted #000;
+            background-image: url(./images/gog.jpg);
+        }
+        .box1{
+            background-size: contain;/* 缩小图片来适应元素的尺寸(保持像素的长宽比)，是图片宽高最长的那个边覆盖元素一边即可 */
+        }
+        .box2{
+            background-size: cover;/*扩展图片来填满元素(保持像素的长宽比)，是图片宽高最短的那个边覆盖元素一边即可*/
+        }
+        .box3{
+            background-size: 100px 100px;/*调整图片到指定大小*/
+        }
+        .box4{
+            background-size: 50% 100%;/*调整图片到指定大小，百分比相对于包含元素的尺寸(并且并不需要包含元素显示设置宽高)*/
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+</body>
+</html>

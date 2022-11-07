@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景色</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            padding: 20px;
+            border: 20px dotted #000;
+        }
+        .box1{
+            background-color: yellow;/*颜色值：英文单词*/
+        }
+        .box2{
+            background-color: #f0f;/*颜色值：十六进制*/
+        }
+        .box3{
+            background-color: rgba(255, 0, 255, 1);/*颜色值：rgb*/
+        }
+        .box4{
+            background-color: hsla(300, 100%, 50%, 1);/*颜色值：色相饱和度*/
+        }
+        .box5{
+            background-color: lightcyan;
+            background-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    background-color: yellow;/*颜色值：英文单词*/
+    <div class="box box1"></div>
+    background-color: #f0f;/*颜色值：十六进制*/
+    <div class="box box2"></div>
+    background-color: rgba(255, 0, 255, 1);/*颜色值：rgb*/
+    <div class="box box3"></div>
+    background-color: hsla(300, 100%, 50%, 1);/*颜色值：色相饱和度*/
+    <div class="box box4"></div>
+    background-color: transparent/*透明色 默认值*/;
+    <div class="box box5"></div>
+</body>
+</html>
+<!-- 
+    {
+        1.属性定义：用于定义元素的背景色。
+    2.背景色覆盖到哪个区域停止？
+    3.background-color可以定义渐变色吗？（不可以）
+    4.背景颜色值的写法有几种
+    - 16进制 #ffffff
+    - 英文单词 red
+    - rgb()
+    - rgba(red,green,bule,alpha)
+     - rgba(0-255,0-255,0-255,0-1)
+    - hsl()
+    - hsla(色相，饱和度，明度，不透明度)
+    - hsla(0-360，0%-100%，0%-100%，0-1)
+    }
+
+    background-color{
+            background-color: rgba(255, 0, 0, 1);/*红*/
+            background-color: rgba(255, 255, 0, 1);/*黄*/
+            background-color: rgba(0, 255, 0, 1);/*绿*/
+            background-color: rgba(0, 255, 255 ,1);/*青*/
+            background-color: rgba(0, 0, 255, 1);/*蓝*/
+            background-color: rgba(255, 0, 255, 1);/*紫*/
+            background-color: hsla(360, 100%, 50%, 1);/*红*/
+            background-color: hsla(60, 100%, 50%, 1);/*黄*/
+            background-color: hsla(120, 100%, 50%, 1);/*绿*/
+            background-color: hsla(180, 100%, 50%, 1);/*青*/
+            background-color: hsla(240, 100%, 50%, 1);/*蓝*/
+            background-color: hsla(300, 100%, 50%, 1);/*紫*/
+        }
+ -->
