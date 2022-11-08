@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>渐变</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            border: 20px dotted #000;
+            background-repeat: no-repeat;
+            /* background-color: lightcoral; */
+        }
+        .linear1{
+            /* background-image: linear-gradient(渐变角度，颜色列表); */
+            background-image: linear-gradient(180deg,pink,
+            skyblue);
+        }
+        .linear2{
+            background-image: linear-gradient(45deg,pink,
+            skyblue);
+        }
+        .linear3{
+            background-image: linear-gradient(180deg,pink,
+            skyblue,
+            lightgreen,
+            yellow,
+            lightcoral);
+        }
+        .linear4{
+            background-image: linear-gradient(180deg,pink 50%,
+            skyblue);
+        }
+        .linear5{
+            background-image: linear-gradient(
+                45deg,
+                pink 25%,
+                transparent 25%,
+                transparent 75%,
+                pink 75%,
+                pink),
+            linear-gradient(
+                -45deg,
+                pink 25%,
+                skyblue 25%,
+                skyblue 75%,
+                pink 75%,
+                pink);
+        }
+        .linear6{
+            width: 510px;
+            height: 210px;
+            background-image: linear-gradient(
+                45deg,
+                pink 25%,
+                transparent 25%,
+                transparent 75%,
+                pink 75%,
+                pink),
+            linear-gradient(
+                -45deg,
+                pink 25%,
+                transparent 25%,
+                transparent 75%,
+                pink 75%,
+                pink);
+                background-size: 30px 30px;
+                background-repeat: repeat;
+                background-clip: padding-box;
+        }
+
+        .radial1{
+            background-image: radial-gradient(
+                ellipse,
+                pink,
+                skyblue);
+        }
+        .radial2{
+            width: 400px;
+            background-image: radial-gradient(
+                circle at top right,
+                pink,
+                skyblue);
+        }
+        .radial3{
+            width: 400px;
+            background-image: radial-gradient(
+                closest-side,
+                pink,
+                skyblue);
+        }
+        .conic1{
+            background-image: conic-gradient(
+                pink,
+                skyblue
+            );
+        }
+        .conic2{
+            background-image: conic-gradient(
+                from 45deg,
+                pink,
+                skyblue
+            );
+        }
+        .conic3{
+            background-image: conic-gradient(
+                at 50px 50px,
+                pink,
+                skyblue
+            );
+        }
+        .conic4{
+            background-image: conic-gradient(
+                at 30% 80%,
+                pink,
+                skyblue
+            );
+        }
+    </style>
+</head>
+<body>
+    渐变是什么？
+    <h1>(线性渐变)linear-gradient(渐变角度，颜色列表)</h1>
+    <div class="box linear1"></div>
+    <div class="box linear2"></div>
+    <div class="box linear3"></div>
+    <div class="box linear4"></div>
+    <div class="box linear5"></div>
+    <div class="box linear6"></div>
+    <h1>(径向渐变)radial-gradient(渐变形状(ellipse,circle) at 渐变位置，颜色列表)</h1>
+    <h1>(径向渐变)radial-gradient(渐变大小，颜色列表)</h1>
+    <div class="box radial1"></div>
+    <div class="box radial2"></div>
+    <div class="box radial3"></div>
+    <div class="box radial4"></div>
+    <h1>(角度渐变)conic-gradient(from 角度，颜色列表)</h1>
+    <h1>(角度渐变)conic-gradient(at 位置，颜色列表)</h1>
+    <div class="box conic1"></div>
+    <div class="box conic2"></div>
+    <div class="box conic3"></div>
+    <div class="box conic4"></div>
+</body>
+</html>
